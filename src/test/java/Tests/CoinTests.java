@@ -8,6 +8,8 @@ package Tests;
 import app.InsertMoney;
 import app.Machine;
 import static org.junit.Assert.assertTrue;
+import org.junit.Before;
+import org.junit.Test;
 
 /**
  *
@@ -15,7 +17,14 @@ import static org.junit.Assert.assertTrue;
  */
 public class CoinTests {
     public static InsertMoney CoinExchange = new InsertMoney();
-    
+    boolean Chosen;
+    @Before
+              public void SetUp(){
+                  Chosen = false;
+                  CoinExchange.setCoin(0);
+                  CoinExchange.setMoney(0);
+              }
+    @Test
     public void InputIsValidOn5(){
       assertTrue(Machine.AcceptCoin(5,CoinExchange));
       

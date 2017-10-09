@@ -3,9 +3,7 @@ package app;
 import java.util.Scanner;
 
 public class Machine {
-    /**
-     * @param args the command line arguments
-     */
+
     public static InsertMoney CoinExchange = new InsertMoney();
     public static boolean AcceptCoin(int moneyInserted, InsertMoney coin){
         if(moneyInserted == 10 || moneyInserted == 25 || moneyInserted == 5){
@@ -15,6 +13,9 @@ public class Machine {
                 }
                 else
                     System.out.println("Not a valid coin.");
+        return false;
+    }
+    public static boolean ChooseItem(int choice, int itemStock[]){
         return false;
     }
     public static void main(String[] args) {
